@@ -1,6 +1,27 @@
-*__pycache__
-*.venv
-*.snapshots
-*.alpackages
+# Ignorer les fichiers de cache Python
+__pycache__/
 *.pyc
 *.pyo
+
+# Ignorer les environnements virtuels
+.venv/
+venv/
+
+# Ignorer les fichiers de snapshots et de packages temporaires
+.snapshots/
+.alpackages/
+
+# Ignorer les fichiers de logs et de debug
+*.log
+*.out
+*.err
+
+# Ignorer les fichiers des éditeurs de texte et IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorer les fichiers de configuration locaux
+.env
+*.env
