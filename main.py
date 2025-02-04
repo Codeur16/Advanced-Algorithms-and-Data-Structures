@@ -36,8 +36,8 @@ def main():
             print(f"Ordre DFS : {AlgorithmSolver.dfs(graph, start)}")
 
         elif choix == "4":
-            values = [60, 100, 120]
-            weights = [10, 20, 30]
+            values = [50, 100, 120, 200]
+            weights = [10, 20, 30, 50]
             capacity = 50
             print(f"Valeurs : {values}")
             print(f"Poids : {weights}")
@@ -45,12 +45,12 @@ def main():
             print(f"Valeur maximale : {AlgorithmSolver.knapsack(values, weights, capacity)}")
 
         elif choix == "5":
-            intervals = [(1,3), (2,6), (8,10), (15,18)]
+            intervals = [(1,4), (3,6), (7,10), (16,19)]
             print(f"Intervals : {intervals}")
             print(f"Intervalles fusionnés : {AlgorithmSolver.merge_intervals(intervals)}")
 
         elif choix == "6":
-            arr = [-2,1,-3,4,-1,2,1,-5,4]
+            arr = [-3,-2,1,-3,4,-1,2,1,-5,4,5]
             print(f"Tableau : {arr}")
             print(f"Somme maximale du sous-tableau : {AlgorithmSolver.max_subarray_sum(arr)}")
 

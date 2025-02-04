@@ -5,7 +5,7 @@ class AlgorithmSolver:
 
     @staticmethod
     def binary_search(arr, target):
-        """Recherche binaire dans un tableau trié."""
+        """La Recherche binaire dans un tableau trié."""
         left, right = 0, len(arr) - 1
         while left <= right:
             mid = (left + right) // 2
@@ -16,10 +16,10 @@ class AlgorithmSolver:
             else:
                 right = mid - 1
         return -1
-
+#EXO1
     @staticmethod
     def bfs(graph, start):
-        """Parcours en largeur (BFS) d'un graphe."""
+        """Ici on fait le parcours en largeur (BFS) d'un graphe."""
         visited, queue = set(), deque([start])
         order = []
         while queue:
@@ -29,10 +29,10 @@ class AlgorithmSolver:
                 order.append(node)
                 queue.extend(graph[node] - visited)
         return order
-
+#EXO2
     @staticmethod
     def dfs(graph, start, visited=None):
-        """Parcours en profondeur (DFS) d'un graphe."""
+        """Cet algo parcours en profondeur (DFS) d'un graphe."""
         if visited is None:
             visited = set()
         visited.add(start)
@@ -40,10 +40,10 @@ class AlgorithmSolver:
         for neighbor in graph[start] - visited:
             order.extend(AlgorithmSolver.dfs(graph, neighbor, visited))
         return order
-
+#EXO3
     @staticmethod
     def knapsack(values, weights, capacity):
-        """Résolution du problème du sac à dos (0/1 Knapsack)."""
+        """Cet algo fair la résolution du problème du sac à dos (0/1 Knapsack)."""
         n = len(values)
         dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
         for i in range(1, n + 1):
@@ -53,10 +53,10 @@ class AlgorithmSolver:
                 else:
                     dp[i][w] = dp[i-1][w]
         return dp[n][capacity]
-
+#EXO4
     @staticmethod
     def merge_intervals(intervals):
-        """Fusionne des intervalles qui se chevauchent."""
+        """CET ALGO Fusionne des intervalles qui se chevauchent."""
         intervals.sort(key=lambda x: x[0])
         merged = [intervals[0]]
         for start, end in intervals[1:]:
@@ -65,10 +65,10 @@ class AlgorithmSolver:
             else:
                 merged.append((start, end))
         return merged
-
+#EXO5
     @staticmethod
     def max_subarray_sum(arr):
-        """Algorithme de Kadane pour la somme maximale d'un sous-tableau."""
+        """Algo de Kadane pour la somme maximale d'un sous-tableau."""
         max_sum = current_sum = arr[0]
         for num in arr[1:]:
             current_sum = max(num, current_sum + num)
